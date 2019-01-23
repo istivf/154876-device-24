@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Георгий Афонин](https://up.htmlacademy.ru/htmlcss/24/user/154876).
-* Наставник: `Неизвестно`.
+* Наставник: [Евгений Алипкин](https://htmlacademy.ru/profile/ealipkin).
 
 ---
 
