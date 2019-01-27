@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>Интернет-магазин гаджетов DEVICE</title>
-  </head>
-  <body>
-    <header class="main-header">
+    <head>
+        <meta charset="utf-8">
+        <title>Каталог</title>
+    </head>
+    <body>
+        <header class="main-header">
         <h1 class="visially-hiddden">Интернет-магазин гаджетов DEVICE</h1>
-        <a class="main-header-logo">
+        <a class="main-header-logo" href="index.html">
             <img src="img/" alt="DEVICE" width="#" height="#">
         </a>
         <!-- здесь будет форма поиска -->
@@ -20,7 +20,7 @@
             <h2>Каталог товаров</h2>
             <ul class="site-navigation">
                 <li><a href="#">Виртуальная реальность</a></li>
-                <li><a href="catalog.html">Моноподы для селфи</a></li>
+                <li><a href="#">Моноподы для селфи</a></li>
                 <li><a href="#">Экшн-камеры</a></li>
                 <li><a href="#">Фитнес-браслеты</a></li>
                 <li><a href="#">Умные часы</a></li>
@@ -34,26 +34,46 @@
         </nav>
     </header>
     <main class="container">
-        <section class="about-us">
-            <h2>О нас</h2>
-            <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-            <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
-            <ul>
-                <li>Деловые Линии</li>
-                <li>Автотрейдинг</li>
-                <li>ЖелДорЭкспедиция</li>
-            </ul>
-            <a class="button" href="#">Подробнее о нас</a>
+        <h1 class="page-title">Моноподы для селфи</h1>
+        
+        <ul class="breadcrumbs">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="#">Каталог товаров</a></li>
+            <li class="breadcrumbs-current">Моноподы для селфи</li>
+        </ul>
+        
+        <section class="filters">
+            <h2 class="visially-hidden">Фильтр товаров</h2>
+            <!-- Здесь будет форма -->
         </section>
-        <section class="contacts">
-            <h2>Контакты</h2>
-            <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-            <!-- здесь будет карта -->
-            <a class="button" href="#">Напишите нам</a>
+        <section class="catalog">
+            <h2 class="visually-hidden">Список моноподов для селфи</h2>
+            <ul class="catalog-list">
+                <li class="catalago-item">
+                    <h3><a href="#">Любительская селфи-палка</a></h3>
+                    <img src="#" alt="Любительская селфи-палка" width="#" height="#">
+                    <span class="catalog-item-price">500 руб.</span>
+                </li>
+                <li class="catalago-item">
+                    <h3><a href="#">Профессиональная селфи-палка</a></h3>
+                    <img src="#" alt="Профессиональная селфи-палка" width="#" height="#">
+                    <span class="catalog-item-price">1500 руб.</span>
+                </li>
+                <li class="catalago-item">
+                    <h3><a href="#">Непотопляемая селфи-палка</a></h3>
+                    <img src="#" alt="Непотопляемая селфи-палка" width="#" height="#">
+                    <span class="catalog-item-price">2500 руб.</span>
+                </li>
+                <li class="catalago-item">
+                    <h3><a href="#">Селфи-палка «Следуй за мной»</a></h3>
+                    <img src="#" alt="Селфи-палка «Следуй за мной»" width="#" height="#">
+                    <span class="catalog-item-price">4900 руб.</span>
+                </li>
+            </ul>
         </section>
     </main>
     <footer class="main-footer">
-        <a class="main-footer-logo">
+        <a class="main-footer-logo" href="index.html">
             <img src="#" alt="DEVICE" width="#" height="#">
         </a>
         <ul class="user-navigation">
@@ -76,5 +96,5 @@
             </ul>
         </div>
     </footer>
-  </body>
+    </body>
 </html>
