@@ -3,12 +3,15 @@
     <head>
         <meta charset="utf-8">
         <title>Каталог</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300&amp;subset=cyrillic" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
-        <header class="main-header">
+        <header class="inner-header">
             <h1 class="visially-hiddden">Интернет-магазин гаджетов DEVICE</h1>
             <a class="main-header-logo" href="index.html">
-                <img src="img/logo. svg" alt="Логотип интернет-магазина DEVICE" width="#" height="#">
+                <img src="img/logo.svg" alt="Логотип интернет-магазина DEVICE" width="#" height="#">
             </a>
             <form>
                 <label for="search">Поиск</label>
@@ -42,7 +45,7 @@
             <ul class="breadcrumbs">
                 <li><a href="index.html">Главная</a></li>
                 <li><a href="#">Каталог товаров</a></li>
-                <li class="breadcrumbs-current">Моноподы для селфи</li>
+                <li class="breadcrumbs-current"><a>Моноподы для селфи</a></li>
             </ul>
             
             <section class="filters">
@@ -53,23 +56,23 @@
                       <ul>
                           <li class="filter-option">
                               <label for="black">Черный</label>
-                              <input type="checkbox" id="black" checked>
+                              <input class="filter-input" type="checkbox" id="black" checked>
                           </li>
                           <li class="filter-option">
                               <label for="white">Белый</label>
-                              <input type="checkbox" id="white">
+                              <input class="filter-input" type="checkbox" id="white">
                           </li>
                           <li class="filter-option">
                               <label for="blue">Синий</label>
-                              <input type="checkbox" id="blue" checked>
+                              <input class="filter-input" type="checkbox" id="blue" checked>
                           </li>
                           <li class="filter-option">
                               <label for="red">Красный</label>
-                              <input type="checkbox" id="red" checked>
+                              <input class="filter-input" type="checkbox" id="red" checked>
                           </li>
                           <li class="filter-option">
                               <label for="pink">Розовый</label>
-                              <input type="checkbox" id="pink">
+                              <input class="filter-input" type="checkbox" id="pink">
                           </li>
                       </ul>
                    </fieldset>
@@ -78,16 +81,16 @@
                        <ul>
                            <li class="filter-option">
                                <label for="yes">Есть</label>
-                               <input type="radio" id="yes" name="bluetooth" checked>
+                               <input class="filter-input" type="radio" id="yes" name="bluetooth" checked>
                            </li>
                            <li class="filter-option">
                                <label for="no">Нет</label>
-                               <input type="radio" id="no" name="bluetooth">
+                               <input class="filter-input" type="radio" id="no" name="bluetooth">
                            </li>
                        </ul>
                    </fieldset>
                 </form>
-                <button class="button" type="submit">Показать</button>
+                <button class="button filter-button" type="submit">Показать</button>
             </section>
             <section class="catalog">
                 <h2 class="visually-hidden">Список моноподов для селфи</h2>
@@ -117,7 +120,7 @@
         </main>
         <footer class="main-footer">
             <a class="main-footer-logo" href="index.html">
-                <img src="img/logo. svg" alt="Логотип интернет-магазина DEVICE" width="#" height="#">
+                <img src="img/logo.svg" alt="Логотип интернет-магазина DEVICE" width="#" height="#">
             </a>
             <ul class="user-navigation">
                 <li class="login-link"><a href="#">Войти</a></li>
@@ -125,7 +128,7 @@
                 <li class="cart-link"><a href="#">Корзина</a></li>
             </ul>
             <address class="footer-address">г. Москва, ул. Строителей, 15</address>
-            <ul class="user-help">
+            <ul class="user-help"> 
                 <li><a href="#">Доставка</a></li>
                 <li><a href="#">Гарантия</a></li>
                 <li><a href="#">Контакты</a></li>
