@@ -16,6 +16,17 @@
 
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;  			
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -31,6 +42,13 @@ body {
 }
 
 .main-header {
+    width: 1040px;
+    min-height: 299px;
+    
+    padding-top: 53px;
+    padding-left: 60px;
+    padding-right: 60px;
+    
     background-color: #f7e296;
 }
 
@@ -47,6 +65,9 @@ a {
 }
 
 .main-navigation {
+    display: flex;
+    flex-direction: column;
+    
     background-color: #f7e296;
 }
 
@@ -60,7 +81,28 @@ a {
     color: #000000;
 }
 
+.user-navigation li{
+    display: inline;
+}
+
 .user-help {
+    padding: 0;
+    margin: 0;
+    
+    margin-left: 100px;
+}
+
+.user-help li:nth-child(2) {
+    margin-left: 38px;
+}
+
+.user-help li:last-child {
+    margin-left: 114px;
+}
+
+.user-help li {
+    display: inline;
+    
     text-transform: uppercase;
     font-family: Gilroy;
     font-size: 18px;
@@ -93,6 +135,14 @@ a {
 .user-help a:focus,
 .catalog-caption:focus {
     opacity: 0.25;
+}
+
+.about-us {
+    width: 462px;
+}
+
+.contacts {
+    width: 560px;
 }
 
 .about-us h2,
@@ -136,6 +186,9 @@ a {
 }
 
 .footer-user-navigation {
+    padding: 0;
+    margin: 0;
+    
     list-style: none;
 }
 
@@ -143,11 +196,32 @@ a {
     color: rgba(255, 255, 255, 0.7);
 }
 
+.footer-user-help {
+    padding: 0;
+    margin: 0;
+    
+    text-transform: uppercase;
+    font-family: Gilroy;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 3.6px;
+}
+
 .footer-social {
+    padding: 0;
+    margin: 0;
+    
     list-style: none;
 }
 
 .inner-header {
+    width: 1040px;
+    min-height: 186px;
+    
+    padding-top: 53px;
+    padding-left: 60px;
+    padding-right: 60px;
+    
     background-color: #f7e296;
 }
 
@@ -168,7 +242,14 @@ a {
 }
 
 .breadcrumbs {
+    padding: 0;
+    margin: 0;
+    
     list-style: none;
+}
+
+.breadcrumbs li {
+    display: inline;
 }
 
 .breadcrumbs a {
@@ -184,6 +265,8 @@ a {
 }
 
 .filters {
+    width: 450px;
+    padding-left: 100px;
     background-color: #efefef;
 }
 
@@ -209,7 +292,15 @@ a {
     color: #5f5f5f;
 }
 
+.catalog {
+    padding-top: 70px;
+    padding-left: 72px;
+}
+
 .catalog-list {
+    padding: 0;
+    margin: 0;
+    
     list-style: none;
 }
 
@@ -230,3 +321,119 @@ a {
     letter-spacing: 0.2px;
     color: #464646;
 }
+
+.container {
+    margin: 0 auto;
+}
+
+.header-top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-bottom-section {
+    display: flex;
+    flex-wrap: wrap;
+    
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-navigation {
+    padding: 0;
+    margin: 0;
+    
+    order: 1;
+}
+
+.main {
+    width: 1160px;
+    margin-bottom: 93px;
+}
+
+.index-columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-wrapper {
+    padding-top: 65px; 
+    width: 1160px;
+    height: 323px;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    margin-bottom: 42px;
+}
+
+.footer-middle-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.footer-address {
+    margin-right: 166px;
+}
+
+.phone-number {
+    margin-left: auto;
+}
+
+.footer-bottom-section {
+    display: flex;
+}
+
+.footer-bottom-section {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-top-section li,
+.footer-middle-section li,
+.footer-bottom-section li {
+    display: inline;
+}
+
+.page-title {
+    margin: 0;
+}
+
+.breadcrumbs-wrapper {
+    padding-top: 45px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 50px;
+}
+
+.catalog-columns {
+    display: flex;
+}
+
+.catalog-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    
+}
+.catalog-item {
+    width: 360px;
+    min-height: 415px;
+    
+    margin-right: 40px;
+    margin-bottom: 38px;
+}
+
+.catalog-item:nth-child(2n) {
+    margin-right: 0px;
+}
+
