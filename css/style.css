@@ -18,6 +18,10 @@
 
 .container {
     margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    width: 1160px;
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -59,20 +63,24 @@ body {
 
 /*  header */
 
-.main-header-logo {
-    position: absolute;
-    top: 23px;
-}
-
 .main-header {
-    width: 1040px;
-    
+    box-sizing: border-box;
     margin-top: 40px;
+/*
     padding-top: 50px;
     padding-left: 60px;
     padding-right: 60px;
     
+*/
     background-color: #f7e296;
+}
+
+.main-header-logo {
+    position: absolute;
+    top: 23px;
+    
+    width: 163px;
+    height: 35px;
 }
 
 .main-header input {
@@ -201,10 +209,8 @@ body {
     
     padding: 0;
     margin: 0;
-    width: 1160px;
     box-sizing: border-box;
-    padding-left: 60px;
-    padding-right: 550px;
+/*    padding-left: 60px;*/
     background-color: #f7e296;
 }
 
@@ -312,13 +318,43 @@ body {
     color: #ffffff;
 }
 
+.footer-social:before {
+    position: absolute;
+    
+    content: "";
+    left: 0;
+    top: 12px;
+    
+    width: 80px;
+    height: 7px;
+    background-color: #ffc600;
+    
+}
+
+.footer-logo {
+    width: 163px;
+    height: 35px;
+}
+
+.footer-logo, 
+.social-button {
+    fill: #ffc600;
+}
+
+.footer-logo:hover {
+    opacity: 0.6;
+}
+
+.footer-logo:focus {
+    opacity: 0.3;
+}
+
 .login-link:before{
     fill: #ffc600;
 }
 
 .footer-wrapper {
     padding-top: 65px; 
-    width: 1160px;
     
     display: flex;
     flex-direction: column;
@@ -383,6 +419,7 @@ body {
 }
 
 .footer-bottom-section {
+    position: relative;
     display: flex;
     justify-content: center;
     
@@ -402,6 +439,9 @@ body {
 }
 
 .social-button {
+    width: 32px;
+    height: 32px;
+    
     opacity: 0.3;
 }
 
@@ -411,6 +451,17 @@ body {
 
 .social-button:hover {
     opacity: 0.1;
+}
+
+.logo-html {
+    position: absolute;
+    
+    top: 12;
+    right: 0;
+    width: 27px;
+    height: 35px;
+    
+    fill: #ffc600;
 }
 
 /* - */
@@ -505,7 +556,6 @@ body {
 }
 
 .main {
-    width: 1160px;
     margin-bottom: 93px;
 }
 
