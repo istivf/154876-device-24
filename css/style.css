@@ -57,8 +57,6 @@ body {
     letter-spacing: 0.2px;
     font-weight: 300;
     color: #000000;
-    
-    background-color: #ffffff;
 }
 
 /*  header */
@@ -66,12 +64,10 @@ body {
 .main-header {
     box-sizing: border-box;
     margin-top: 40px;
-/*
     padding-top: 50px;
     padding-left: 60px;
     padding-right: 60px;
     
-*/
     background-color: #f7e296;
 }
 
@@ -180,7 +176,9 @@ body {
 }
 
 .catalog-caption {
+    position: relative;
     margin: 8px 0;
+    padding-right: 35px;
     
     text-transform: uppercase;
     font-family: Gilroy;
@@ -189,17 +187,35 @@ body {
     line-height: 1.33;
     letter-spacing: 3.6px;
     color: #000000;
+
+}
+
+.catalog-caption::after {
+    content: "";
+    
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 1px;
+    right: 0px;
+    
+    opacity: 0.5;
+    
+    background-image: url(../img/plus.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
 }
 
 .site-navigation-wrapper {
     position: relative;
+    box-sizing: border-box;
+    
 }
 
 .site-navigation-wrapper:hover .site-navigation {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-
 }
 
 .site-navigation {
@@ -209,8 +225,12 @@ body {
     
     padding: 0;
     margin: 0;
+    width: 1120px;
     box-sizing: border-box;
-/*    padding-left: 60px;*/
+    padding-left: 95px;
+    padding-right: 500px;
+    padding-top: 40px;
+    padding-bottom: 45px;
     background-color: #f7e296;
 }
 
@@ -268,12 +288,39 @@ body {
 
 /* main */
 
+.index-columns {
+    margin-bottom: 90px;
+}
+
 .about-us {
+    position: relative;
     width: 462px;
 }
 
+.about-us ul {
+    margin-bottom: 85px;
+}
+
 .contacts {
+    position: relative;
     width: 560px;
+}
+
+.contacts img {
+    margin-bottom: 50px;
+}
+
+.about-us:before,
+.contacts:before {
+    content: "";
+    
+    position: absolute;
+    width: 80px;
+    height: 7px;
+    top: 0;
+    left: 0;
+    
+    background-color: #000000;
 }
 
 .about-us h2,
@@ -293,18 +340,46 @@ body {
 }
 
 .button {
+    position: relative;
+    padding: 0;
+    z-index: 1;
+    
     font-family: Gilroy;
     font-size: 18.5px;
     font-weight: 800;
     line-height: 1.27;
     letter-spacing: 3.7px;
-    color: #000000; 
     text-transform: uppercase;
-    
-    background-color: #f0c52e;
+    text-align: center;
     border: none;
+    background: none;
     
 }
+
+.button::before {
+    content: "";
+    
+    position: absolute;
+    
+    width: 100%;
+    height: 8px;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    
+    background-color: #f0c52e;
+    transition: 0.2s;
+}
+
+.button:hover::before {
+    height: 35px;
+}
+
+.button:focus {
+    color: rgba(0, 0, 0, 0.3);
+}
+
 
 /* footer */
 
@@ -349,7 +424,7 @@ body {
     opacity: 0.3;
 }
 
-.login-link:before{
+.login-link::before{
     fill: #ffc600;
 }
 
@@ -474,7 +549,18 @@ body {
     color: #000000;
 }
 
+.breadcrumbs-wrapper {
+    padding-top: 45px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 50px;
+}
+
 .breadcrumbs {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    
     padding: 0;
     margin: 0;
     
@@ -482,11 +568,30 @@ body {
 }
 
 .breadcrumbs li {
-    display: inline;
+    position: relative;
+    margin-right: 40px;
 }
 
-.breadcrumbs a {
-    color: #cacaca;
+.breadcrumbs li::after {
+    content: "";
+    
+    position: absolute;
+    top: 15px;
+    right: -20px;
+    width: 4px;
+    height: 7px;
+    
+    background-image: url("../img/nav-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.breadcrumbs li:last-child {
+    margin-right: 0;
+}
+
+.breadcrumbs a  {
+    color: rgba(0, 0, 0, 0.3);
 }
 
 .breadcrumbs a:hover {
@@ -497,17 +602,24 @@ body {
     color: #e5e5e5;
 }
 
+.breadcrumbs-current::after {
+    display: none;
+}
+
 .filters {
-    width: 450px;
-    padding-left: 100px;
     background-color: #efefef;
 }
 
 .filter fieldset {
     border: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 30px;
 }
 
 .filter legend {
+    margin-bottom: 10px;
+    
     font-family: Gilroy;
     font-size: 18px;
     font-weight: 800;
@@ -516,13 +628,89 @@ body {
 }
 
 .filter ul {
+    width: 270px;
+    
+    padding: 0;
+    margin: 0;
+        
     list-style: none;
     line-height: 2.86;
     letter-spacing: 0.1px;
 }
 
+.filter-option {
+    padding-left: 37px;
+}
+
+.filter-option label {
+    position: relative;
+
+    display: block;
+
+    cursor: pointer;
+    user-select: none;
+}
+
+.filter-input-checkbox:checked + label::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: -37px;
+
+    width: 26px;
+    height: 23px;
+    
+    background-image: url(../img/checkbox-on.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.filter-input-checkbox + label::before {
+    content: "";
+
+    position: absolute;
+    top: 15px;
+    left: -37px;
+    
+    width: 26px;
+    height: 23px;
+    
+    background-image: url(../img/checkbox-off.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;  
+}
+
 .filter-input:hover + label {
     color: #5f5f5f;
+}
+
+.filter-input-radio + label:before {
+    content: "";
+
+    position: absolute;
+    top: 12px;
+    left: -37px;
+    
+    width: 16px;
+    height: 16px;
+    
+    border: 5px solid #000000;
+    border-radius: 50%;
+    
+}
+
+.filter-input-radio:checked + label::after {
+    content: "";
+
+    position: absolute;
+    top: 20px;
+    left: -29px;
+    
+    width: 10px;
+    height: 10px;
+    
+    background-color: #000000;
+    border-radius: 50%; 
 }
 
 .catalog {
@@ -537,6 +725,19 @@ body {
     list-style: none;
 }
 
+.catalog-item {
+    position: relative;
+}
+
+.catalog-item:hover img{
+    opacity: 0.4;
+    filter: brightness(0.9);
+}
+
+.catalog-item:hover .catalog-item-button {
+    display: flex;
+}
+
 .catalog-item a{
     font-family: Gilroy;
     font-size: 18px;
@@ -546,17 +747,42 @@ body {
     color: #000000;
 }
 
-.catalog-item-price {
-    font-family: Gilroy;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 1.5;
-    letter-spacing: 0.2px;
-    color: #464646;
+.catalog-item-button {
+    position: absolute;
+    
+    display: none;
+    flex-direction: column;
+    
+    top: 180px;
+    left: 80px;
 }
 
-.main {
-    margin-bottom: 93px;
+.catalog-item-button button {
+    margin-bottom: 35px;
+}
+
+.catalog-item-button span {
+    opacity: 0.5;
+}
+
+.catalog-item-button span:hover {
+    opacity: 1;
+}
+
+.catalog-item-button span:focus {
+    opacity: 0.2;
+}
+
+.price-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.price-wrapper h3 {
+    margin: 0;
+    padding: 0;
 }
 
 .index-columns {
@@ -566,13 +792,6 @@ body {
 
 .page-title {
     margin: 0;
-}
-
-.breadcrumbs-wrapper {
-    padding-top: 45px;
-    padding-left: 60px;
-    padding-right: 60px;
-    padding-bottom: 50px;
 }
 
 .catalog-columns {
@@ -598,3 +817,103 @@ body {
     margin-right: 0px;
 }
 
+.modal-login {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 960px;
+    padding: 80px 100px 80px 100px; 
+}
+
+.modal-login input,
+.modal-login textarea {
+    background-color: rgba(234,234,234, 0.5);
+    border: none;
+}
+
+.modal-login input:hover,
+.modal-login textarea:hover {
+    background-color: rgba(234,234,234, 1);
+}
+
+.modal-login input:focus,
+.modal-login textarea:focus {
+    background: none;
+    border: 1px solid #f7e296;
+}
+
+
+.login-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.login-form p{
+    margin: 0;
+    padding: 0;
+}
+
+.login-form label {
+    font-family: Gilroy;
+    font-size: 18.5px;
+    font-weight: 800;
+    line-height: 1.27;
+}
+
+.login-form input {
+    width: 360px;
+    height: 50px;
+    box-sizing: border-box;
+    padding-left: 20px;
+    margin-bottom: 35px;
+}
+
+.login-form textarea {
+    width: 760px;
+    height: 160px;
+    box-sizing: border-box;
+    padding-top: 20px;
+    padding-left: 20px;
+    margin-bottom: 50px;
+}
+
+.modal-close {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    margin: 0;
+    padding: 0;
+    top: 24px;
+    right: 24px;
+   
+    background: none;
+    border: none;
+    opacity: 0.5;
+}
+
+.modal-close:hover {
+    opacity: 1;
+}
+
+.modal-close:focus {
+    opacity: 0.3;
+}
+
+.modal-close-button {
+    width: 200px;
+}
+
+.modal-map {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.modal-map .modal-close {
+    position: absolute;
+    top: 45px;
+    right: 140px;
+}
