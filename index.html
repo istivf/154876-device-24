@@ -7,7 +7,7 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300&amp;subset=cyrillic" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
     </head>
-    
+
     <body>
         <header class="container">
             <div class="main-header">
@@ -17,9 +17,10 @@
                 </a>
                 <nav class="main-navigation">
                     <div class="header-top-section">
-                        <form>
+                        <form class="search-form">
                             <label for="search" class="visually-hidden">Поиск</label>
                             <input type="text" id="search" placeholder="Поиск по сайту">
+                            <button class="main-search-button" type="button">Найти</button>
                         </form>
                         <ul class="user-navigation">
                             <li class="login-link"><a href="#">Войти</a></li>
@@ -36,19 +37,19 @@
                                 <li><a href="#">Квадрокоптеры</a></li>
                                 <li><a href="catalog.html">Моноподы для селфи</a></li>
                                 <li><a href="#">Умные часы</a></li>
-                                <li><a href="#">Экшн-камеры</a></li>    
-                            </ul> 
+                                <li><a href="#">Экшн-камеры</a></li>
+                            </ul>
                         </div>
                         <ul class="user-help">
                             <li><a href="#">Доставка</a></li>
                             <li><a href="#">Гарантия</a></li>
                             <li><a href="#">Контакты</a></li>
-                        </ul>    
+                        </ul>
                     </div>
                 </nav>
             </div>
         </header>
-    
+
         <main class="main container">
             <div class="index-columns">
                 <section class="about-us">
@@ -67,10 +68,10 @@
                     <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
                     <img src="img/map.jpg" alt="Магазина Девайс находится по адресу г.Москва, ул.Строителей, 15" width="560" height="222"><br>
                     <a class="button" href="#">Напишите нам</a>
-                </section> 
+                </section>
             </div>
         </main>
-    
+
         <footer class="main-footer">
             <div class="footer-wrapper container">
                 <div class="footer-top-section">
@@ -140,20 +141,20 @@
                 </div>
             </div>
         </footer>
-    
+
         <section class="modal modal-login container">
             <h2 class="visually-hidden">Напишите нам</h2>
             <form class="login-form" action="#" method="post">
                 <p>
-                    <label for="name">Ваше имя:</label><br>
-                    <input type="text" id="name" placeholder="Имя Фамилия">     
+                    <label for="name">Ваше имя:</label>
+                    <input type="text" id="name" placeholder="Имя Фамилия">
                 </p>
                 <p>
-                    <label for="e-mail">Ваш e-mail:</label><br>
-                    <input type="text" id="e-mail" placeholder="email@example.com">    
+                    <label for="e-mail">Ваш e-mail:</label>
+                    <input type="text" id="e-mail" placeholder="email@example.com">
                 </p>
                 <p>
-                    <label for="text">Текст письма:</label><br>
+                    <label for="text">Текст письма:</label>
                     <textarea type="textarea" id="text" placeholder="В свободной форме"></textarea>
                 </p>
             </form>
@@ -167,13 +168,11 @@
 </svg>
             </button>
             <button class="button modal-close-button" type="submit">ОТПРАВИТЬ</button>
-        </section>    
-        
-        <section class="modal-map container">
+        </section>
+
+        <section class="modal modal-map container">
             <h2 class="visually-hidden">Наш адрес:</h2>
-            <p>
                 <img src="img/map-big.jpg" width="960" height="560" alt="Магазина Девайс находится по адресу г.Москва, ул.Строителей, 15">
-            </p>
             <button class="modal-close" type="button">
                 <span class="visually-hidden">Закрыть</span>
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -184,6 +183,6 @@
 </svg>
             </button>
         </section>
-        
+
     </body>
 </html>

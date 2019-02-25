@@ -50,10 +50,10 @@ a {
 body {
     margin: 0;
     padding: 0;
-    
+
     font-family: "Open Sans", "Arial", sans-serif;
     font-size: 15px;
-    line-height: 2;
+    line-height: 2em;
     letter-spacing: 0.2px;
     font-weight: 300;
     color: #000000;
@@ -67,19 +67,21 @@ body {
     padding-top: 50px;
     padding-left: 60px;
     padding-right: 60px;
-    
+
     background-color: #f7e296;
 }
 
 .main-header-logo {
     position: absolute;
     top: 23px;
-    
+
     width: 163px;
     height: 35px;
 }
 
 .main-header input {
+    height: 50px;
+
     font: inherit;
 
     background-color: transparent;
@@ -90,13 +92,75 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+
     margin-bottom: 30px;
+}
+
+.search-form {
+    position: relative;
+    box-sizing: border-box;
+    width: 400px;
+}
+
+.search-form::before {
+    content: "";
+
+    position: absolute;
+    top: 17px;
+    left: 10px;
+    width: 16px;
+    height: 16px;
+
+    background-image: url("../img/search.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.header-top-section  input{
+    box-sizing: border-box;
+    width: 315px;
+    padding-left: 40px;
+    padding-right: 20px;
+
+    font: inherit;
+    color: #000000;
+}
+
+.search-form input:focus {
+    border-bottom: 1px solid black;
+}
+
+.search-form input:focus + .main-search-button {
+    display: block;
+}
+
+.main-search-button {
+    display: none;
+    position: absolute;
+    box-sizing: border-box;
+    width: 85px;
+    height: 50px;
+    top: 0;
+    right: 0;
+
+    color: #000000;
+    background-color: transparent;
+    border: 1px solid #000000;
+
+}
+
+.main-search-button:hover {
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.main-search-button:focus {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .user-navigation {
     display: flex;
-    
+
     margin: 0;
     padding: 0;
 }
@@ -126,13 +190,13 @@ body {
 
 .login-link::before {
     content: "";
-    
+
     position: absolute;
     top: 12px;
     left: 0;
     width: 12px;
     height: 12px;
-    
+
     background-image: url("../img/user.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -140,13 +204,13 @@ body {
 
 .compare-link::before {
     content: "";
-    
+
     position: absolute;
     top: 12px;
     left: 0;
     width: 12px;
     height: 12px;
-    
+
     background-image: url("../img/compare.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -154,13 +218,13 @@ body {
 
 .cart-link::before {
     content: "";
-    
+
     position: absolute;
     top: 12px;
     left: 0;
     width: 12px;
     height: 12px;
-    
+
     background-image: url("../img/cart.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -171,7 +235,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    
+
     padding-bottom: 50px;
 }
 
@@ -179,12 +243,12 @@ body {
     position: relative;
     margin: 8px 0;
     padding-right: 35px;
-    
+
     text-transform: uppercase;
-    font-family: Gilroy;
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 18px;
     font-weight: 800;
-    line-height: 1.33;
+    line-height: 1.33em;
     letter-spacing: 3.6px;
     color: #000000;
 
@@ -192,15 +256,15 @@ body {
 
 .catalog-caption::after {
     content: "";
-    
+
     position: absolute;
     width: 16px;
     height: 16px;
     top: 1px;
     right: 0px;
-    
+
     opacity: 0.5;
-    
+
     background-image: url(../img/plus.png);
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -209,7 +273,7 @@ body {
 .site-navigation-wrapper {
     position: relative;
     box-sizing: border-box;
-    
+
 }
 
 .site-navigation-wrapper:hover .site-navigation {
@@ -222,7 +286,7 @@ body {
     position: absolute;
     left: -60px;
     display: none;
-    
+
     padding: 0;
     margin: 0;
     width: 1120px;
@@ -232,11 +296,12 @@ body {
     padding-top: 40px;
     padding-bottom: 45px;
     background-color: #f7e296;
+    z-index: 1;
 }
 
 .user-help {
     display: flex;
-    
+
     padding: 0;
     margin: 0;
 }
@@ -251,7 +316,7 @@ body {
 
 .user-help li {
     text-transform: uppercase;
-    font-family: Gilroy;
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 18px;
     font-weight: 800;
     letter-spacing: 3.6px;
@@ -313,27 +378,27 @@ body {
 .about-us:before,
 .contacts:before {
     content: "";
-    
+
     position: absolute;
     width: 80px;
     height: 7px;
     top: 0;
     left: 0;
-    
+
     background-color: #000000;
 }
 
 .about-us h2,
 .contacts h2 {
-    font-family: Gilroy;
-    font-size: 47.5px;
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-size: 47px;
     font-weight: 800;
     letter-spacing: 0.5px;
     color: #000000;
 }
 
 .about-us li {
-    font-family: Gilroy;
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 16px;
     font-weight: 800;
     color: #000000;
@@ -341,33 +406,32 @@ body {
 
 .button {
     position: relative;
-    padding: 0;
-    z-index: 1;
-    
-    font-family: Gilroy;
-    font-size: 18.5px;
+    padding: 0 30px;
+
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-size: 18px;
     font-weight: 800;
-    line-height: 1.27;
+    line-height: 1.27em;
     letter-spacing: 3.7px;
     text-transform: uppercase;
     text-align: center;
     border: none;
     background: none;
-    
+
 }
 
 .button::before {
     content: "";
-    
+
     position: absolute;
-    
+
     width: 100%;
     height: 8px;
     top: 50%;
     left: 50%;
     z-index: -1;
     transform: translate(-50%, -50%);
-    
+
     background-color: #f0c52e;
     transition: 0.2s;
 }
@@ -385,7 +449,7 @@ body {
 
 .main-footer {
     color: #ffffff;
-    
+
     background-color: #464646;
 }
 
@@ -393,17 +457,17 @@ body {
     color: #ffffff;
 }
 
-.footer-social:before {
+.footer-bottom-section::before {
     position: absolute;
-    
+
     content: "";
     left: 0;
     top: 12px;
-    
+
     width: 80px;
     height: 7px;
     background-color: #ffc600;
-    
+
 }
 
 .footer-logo {
@@ -411,7 +475,7 @@ body {
     height: 35px;
 }
 
-.footer-logo, 
+.footer-logo,
 .social-button {
     fill: #ffc600;
 }
@@ -429,8 +493,8 @@ body {
 }
 
 .footer-wrapper {
-    padding-top: 65px; 
-    
+    padding-top: 65px;
+
     display: flex;
     flex-direction: column;
 }
@@ -445,16 +509,16 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+
     margin-bottom: 42px;
 }
 
 .footer-user-navigation {
     display: flex;
-    
+
     padding: 0;
     margin: 0;
-    
+
     list-style: none;
 }
 
@@ -474,16 +538,16 @@ body {
 
 .footer-address {
     margin-right: 166px;
-    
+
     font-style: normal;
 }
 
 .footer-user-help {
     padding: 0;
     margin: 0;
-    
+
     text-transform: uppercase;
-    font-family: Gilroy;
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 18px;
     font-weight: 800;
     letter-spacing: 3.6px;
@@ -497,26 +561,26 @@ body {
     position: relative;
     display: flex;
     justify-content: center;
-    
+
     margin-bottom: 67px;
 }
 
 .footer-social {
     display: flex;
     justify-content: space-between;
-    
+
     width: 140px;
-    
+
     padding: 0 11px;
     margin: 0;
-    
+
     list-style: none;
 }
 
 .social-button {
     width: 32px;
     height: 32px;
-    
+
     opacity: 0.3;
 }
 
@@ -530,20 +594,23 @@ body {
 
 .logo-html {
     position: absolute;
-    
-    top: 12;
+
+    top: 0;
     right: 0;
     width: 27px;
     height: 35px;
-    
+
     fill: #ffc600;
 }
 
 /* - */
 
 .page-title {
-    font-family: Gilroy;
-    font-size: 47.5px;
+    margin: 0;
+    margin-bottom: 25px;
+
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-size: 47px;
     font-weight: 800;
     text-align: left;
     color: #000000;
@@ -560,10 +627,10 @@ body {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    
+
     padding: 0;
     margin: 0;
-    
+
     list-style: none;
 }
 
@@ -574,13 +641,13 @@ body {
 
 .breadcrumbs li::after {
     content: "";
-    
+
     position: absolute;
     top: 15px;
     right: -20px;
     width: 4px;
     height: 7px;
-    
+
     background-image: url("../img/nav-arrow.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -607,7 +674,23 @@ body {
 }
 
 .filters {
+    position: relative;
     background-color: #efefef;
+}
+
+.filters::before {
+    content: "";
+
+    position: absolute;
+
+    height: 100%;
+    width: 1000%;
+    right: 0;
+    top: 0;
+    z-index: -1;
+
+    background-color: #efefef;
+
 }
 
 .filter fieldset {
@@ -619,8 +702,8 @@ body {
 
 .filter legend {
     margin-bottom: 10px;
-    
-    font-family: Gilroy;
+
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 18px;
     font-weight: 800;
     letter-spacing: 0.2px;
@@ -629,12 +712,12 @@ body {
 
 .filter ul {
     width: 270px;
-    
+
     padding: 0;
     margin: 0;
-        
+
     list-style: none;
-    line-height: 2.86;
+    line-height: 2.86em;
     letter-spacing: 0.1px;
 }
 
@@ -659,7 +742,7 @@ body {
 
     width: 26px;
     height: 23px;
-    
+
     background-image: url(../img/checkbox-on.svg);
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -671,13 +754,13 @@ body {
     position: absolute;
     top: 15px;
     left: -37px;
-    
+
     width: 26px;
     height: 23px;
-    
+
     background-image: url(../img/checkbox-off.svg);
     background-repeat: no-repeat;
-    background-position: 0 0;  
+    background-position: 0 0;
 }
 
 .filter-input:hover + label {
@@ -690,13 +773,13 @@ body {
     position: absolute;
     top: 12px;
     left: -37px;
-    
+
     width: 16px;
     height: 16px;
-    
+
     border: 5px solid #000000;
     border-radius: 50%;
-    
+
 }
 
 .filter-input-radio:checked + label::after {
@@ -705,12 +788,12 @@ body {
     position: absolute;
     top: 20px;
     left: -29px;
-    
+
     width: 10px;
     height: 10px;
-    
+
     background-color: #000000;
-    border-radius: 50%; 
+    border-radius: 50%;
 }
 
 .catalog {
@@ -721,7 +804,7 @@ body {
 .catalog-list {
     padding: 0;
     margin: 0;
-    
+
     list-style: none;
 }
 
@@ -739,22 +822,34 @@ body {
 }
 
 .catalog-item a{
-    font-family: Gilroy;
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 18px;
     font-weight: 800;
-    line-height: 1.33;
+    line-height: 1.33em;
     letter-spacing: 0.2px;
     color: #000000;
 }
 
+.item-image-wrapper {
+  position: relative;
+
+}
+
 .catalog-item-button {
     position: absolute;
-    
+
     display: none;
     flex-direction: column;
-    
-    top: 180px;
-    left: 80px;
+    justify-content: center;
+    align-items: center;
+
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(239, 239, 239, 0.7);
 }
 
 .catalog-item-button button {
@@ -776,7 +871,6 @@ body {
 .price-wrapper {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
     margin-top: 20px;
 }
 
@@ -790,10 +884,6 @@ body {
     justify-content: space-between;
 }
 
-.page-title {
-    margin: 0;
-}
-
 .catalog-columns {
     display: flex;
 }
@@ -803,12 +893,12 @@ body {
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
-    
+
 }
 .catalog-item {
     width: 360px;
     min-height: 415px;
-    
+
     margin-right: 40px;
     margin-bottom: 38px;
 }
@@ -817,14 +907,23 @@ body {
     margin-right: 0px;
 }
 
+.modal {
+    position: fixed;
+    left: 50%;
+
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
 .modal-login {
-    position: relative;
+    top: 50px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
     width: 960px;
-    padding: 80px 100px 80px 100px; 
+    padding: 80px 100px 80px 100px;
+    background-color: #ffffff;
+    margin-left: -480px;
 }
 
 .modal-login input,
@@ -857,10 +956,13 @@ body {
 }
 
 .login-form label {
-    font-family: Gilroy;
-    font-size: 18.5px;
+    display: block;
+    padding-bottom: 8px;
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-size: 18px;
     font-weight: 800;
-    line-height: 1.27;
+    line-height: 1.27em;
+
 }
 
 .login-form input {
@@ -878,6 +980,7 @@ body {
     padding-top: 20px;
     padding-left: 20px;
     margin-bottom: 50px;
+    resize: none;
 }
 
 .modal-close {
@@ -888,7 +991,7 @@ body {
     padding: 0;
     top: 24px;
     right: 24px;
-   
+
     background: none;
     border: none;
     opacity: 0.5;
@@ -907,13 +1010,9 @@ body {
 }
 
 .modal-map {
+    top: 650px;
     display: flex;
     justify-content: center;
-    position: relative;
-}
-
-.modal-map .modal-close {
-    position: absolute;
-    top: 45px;
-    right: 140px;
+    width: 960px;
+    margin-left: -480px;
 }
