@@ -910,13 +910,13 @@ body {
 .modal {
     position: fixed;
     left: 50%;
+    display: none;
 
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .modal-login {
     top: 50px;
-    display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
@@ -1005,14 +1005,17 @@ body {
     opacity: 0.3;
 }
 
-.modal-close-button {
+.modal-send {
     width: 200px;
 }
 
 .modal-map {
     top: 650px;
-    display: flex;
     justify-content: center;
     width: 960px;
     margin-left: -480px;
+}
+
+.modal-show {
+    display: flex;
 }
