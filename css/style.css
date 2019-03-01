@@ -937,8 +937,7 @@ body {
 }
 
 .modal-login {
-    top: 50px;
-        /* top: 1057px; */
+    top: 400px;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
@@ -1033,8 +1032,7 @@ body {
 
 .modal-map {
     margin: 0 auto;
-    top: 650px;
-    /* top: 1850px; */
+    top: 400px;
     justify-content: center;
     width: 960px;
     margin-left: -480px;
@@ -1049,4 +1047,159 @@ body {
 .modal-error {
     animation-name: shake;
     animation-duration: 0.6s;
+}
+
+.sliders {
+    background-image: linear-gradient(#f7e296 114px, #fff 114px);
+    padding-left: 86px;
+    padding-right: 60px;
+    margin-bottom: 100px;
+}
+
+.popular {
+    margin-bottom: 84px;
+}
+
+.popular-list{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.popular-list li{
+    width: 160px;
+}
+
+.popular-img-wrapper {
+    width: 160px;
+    height: 160px;
+
+    background-color: #f7e296;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom {
+    align-items: flex-end;
+}
+
+.popular-list h3{
+    margin: 0;
+    padding: 0;
+    padding-top: 39px;
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.33;
+    letter-spacing: 0.2px;
+}
+
+.services {
+    height: 390px;
+    background-image: linear-gradient(#fff 100px, #e5e5e5 100px);
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.services-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.services-list {
+    position: relative;
+    width: 284px;
+    list-style: none;
+    margin-top: 80px;
+    padding: 0;
+}
+
+.services-list::before{
+    content: "";
+
+    position: absolute;
+    width: 7px;
+    height: 319px;
+    top: -80px;
+    right: 0;
+    background-color: #000000;
+}
+
+.services-list li{
+    margin-bottom: 24px;
+}
+
+.service-information {
+    display: flex;
+    width: 700px;
+}
+
+.service-information h2 {
+    margin: 0;
+    padding-top: 71px;
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-size: 47px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 0.5px;
+}
+
+.service-information img {
+    padding-top: 85px;
+    margin-left: 132px;
+}
+
+.brands {
+    margin-top: 94px;
+    margin-bottom: 93px;
+
+}
+
+.brands-list {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+
+.brands-list li{
+    width: 260px;
+    height: 100px;
+
+}
+
+.logo1 {
+    background-image: url(../img/logo-1.jpg);
+}
+
+.logo1:hover{
+    background-image: url(../img/logo-1-color.jpg);
+}
+
+.logo2 {
+    background-image: url(../img/logo-2.jpg);
+}
+
+.logo2:hover{
+    background-image: url(../img/logo-2-color.jpg);
+}
+
+.logo3 {
+    background-image: url(../img/logo-3.jpg);
+}
+
+.logo3:hover{
+    background-image: url(../img/logo-3-color.jpg);
+}
+
+.logo4 {
+    background-image: url(../img/logo-4.jpg);
+}
+
+.logo4:hover{
+    background-image: url(../img/logo-4-color.jpg);
 }
