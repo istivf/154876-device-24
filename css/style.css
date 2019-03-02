@@ -1324,19 +1324,9 @@ body {
     color: #000000;
 }
 
-/* .catalog-header:before {
-    content: "";
-
-    position: absolute;
-    height: 82px;
-    width: 100%;
-
-    top: 0;
-    right: 100%;
-
-    background-color: #dcdcdc;
-
-} */
+.catalog-sorting {
+    display: flex;
+}
 
 .catalog-header ul {
     display: flex;
