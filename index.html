@@ -20,7 +20,7 @@
                         <form class="search-form">
                             <label for="search" class="visually-hidden">Поиск</label>
                             <input type="text" id="search" placeholder="Поиск по сайту">
-                            <button class="main-search-button" type="button">Найти</button>
+                            <button class="main-search-button" type="submit">Найти</button>
                         </form>
                         <ul class="user-navigation">
                             <li class="login-link"><a href="#">Войти</a></li>
@@ -59,11 +59,11 @@
                         <h1>Делай селфи, как Бен Стиллер! </h1>
                         <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
                         <div class="slider-buttons">
-                            <button class="button slider-button">Подробнее</button>
+                            <a class="button slider-button" href="#">Подробнее</a>
                             <ul>
                                 <li>
-                                    <input class="slider-radio visually-hidden" type="radio" name="slider1" id="slider-1" checked>
-                                    <label class="slider1-on" for="slider-1"><span class="visually-hidden">Слайдер 1</span></label>
+                                    <input class="slider-radio visually-hidden" type="radio" name="slider1" id="slider-1">
+                                    <label class="slider1-on checked-slider" for="slider-1"><span class="visually-hidden">Слайдер 1</span></label>
                                 </li>
                                 <li>
                                     <input class="slider-radio visually-hidden" type="radio" name="slider1" id="slider-2">
@@ -89,7 +89,7 @@
                         <h1>Худеем правильно!</h1>
                         <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
                         <div class="slider-buttons">
-                            <button class="button slider-button">Подробнее</button>
+                            <a class="button slider-button" href="#">Подробнее</a>
                             <ul>
                                 <li>
                                     <input class="slider-radio visually-hidden" type="radio" name="slider2" id="slider-4">
@@ -97,8 +97,8 @@
 
                                 </li>
                                 <li>
-                                    <input class="slider-radio visually-hidden" type="radio" name="slider2" id="slider-5" checked>
-                                    <label class="slider2-on" for="slider-5"><span class="visually-hidden">Слайдер 2</span></label>
+                                    <input class="slider-radio visually-hidden" type="radio" name="slider2" id="slider-5">
+                                    <label class="slider2-on checked-slider" for="slider-5"><span class="visually-hidden">Слайдер 2</span></label>
                                 </li>
                                 <li>
                                     <input class="slider-radio visually-hidden" type="radio" name="slider2" id="slider-6">
@@ -118,7 +118,7 @@
                         <h1>Порхает как бабочка, жалит как пчела!</h1>
                         <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
                         <div class="slider-buttons">
-                            <button class="button slider-button">Подробнее</button>
+                            <a class="button slider-button" href="#">Подробнее</a>
                             <ul>
                                 <li>
                                     <input class="slider-radio visually-hidden" type="radio" name="slider31" id="slider-7">
@@ -129,8 +129,8 @@
                                     <label class="slider2-on" for="slider-8"><span class="visually-hidden">Слайдер 2</span></label>
                                 </li>
                                 <li>
-                                    <input class="slider-radio visually-hidden" type="radio" name="slider31" id="slider-9" checked>
-                                    <label class="slider3-on" for="slider-9"><span class="visually-hidden">Слайдер 3</span></label>
+                                    <input class="slider-radio visually-hidden" type="radio" name="slider31" id="slider-9">
+                                    <label class="slider3-on checked-slider" for="slider-9"><span class="visually-hidden">Слайдер 3</span></label>
                                 </li>
                             </ul>
                         </div>
@@ -144,7 +144,7 @@
             <section class="popular container">
                 <ul class="popular-list">
                     <li>
-                        <a href="#">
+                        <a class="popular-list-item" href="#">
                             <div class="popular-img-wrapper">
                                 <img src="img/popular-1.svg" alt="Виртуальная реальность" width="105" height="55">
                             </div>
@@ -152,7 +152,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="catalog.html">
+                        <a class="popular-list-item" href="catalog.html">
                             <div class="popular-img-wrapper bottom">
                                 <img src="img/popular-2.svg" alt="Моноподы для селфи" width="88" height="118">
                             </div>
@@ -161,7 +161,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a class="popular-list-item" href="#">
                             <div class="popular-img-wrapper">
                                 <img src="img/popular-3.svg" alt="Экшн-камеры" width="88" height="88">
                             </div>
@@ -169,7 +169,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a class="popular-list-item" href="#">
                             <div class="popular-img-wrapper">
                                 <img src="img/popular-4.svg" alt="Фитнес-браслеты" width="107" height="65">
                             </div>
@@ -177,7 +177,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a class="popular-list-item" href="#">
                             <div class="popular-img-wrapper">
                                 <img src="img/popular-5.svg" alt="Умные часы" width="56" height="98">
                             </div>
@@ -185,7 +185,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a class="popular-list-item" href="#">
                             <div class="popular-img-wrapper">
                                 <img src="img/popular-6.svg" alt="Квадрокоптеры" width="132" height="69">
                             </div>
@@ -198,9 +198,9 @@
                 <div class="services-wrapper container">
                     <section>
                         <ul class="services-list">
-                            <li><button class="button services-button delivery-button">Доставка</button></li>
-                            <li><button class="button services-button warranty-button">Гарантия</button></li>
-                            <li><button class="button services-button credit-button">Кредит</button></li>
+                            <li><button type="button" class="button services-button delivery-button">Доставка</button></li>
+                            <li><button type="button" class="button services-button warranty-button">Гарантия</button></li>
+                            <li><button type="button" class="button services-button credit-button">Кредит</button></li>
                         </ul>
                     </section>
                     <section class="service-information delivery-service">
@@ -228,10 +228,10 @@
             </section>
             <section class="brands container">
                 <ul class="brands-list">
-                    <li class="logo1"><a href="#"><span class="visually-hidden">DJI</span></a></li>
-                    <li class="logo2"><a href="#"><span class="visually-hidden">SP Gadgets</span></a></li>
-                    <li class="logo3"><a href="#"><span class="visually-hidden">GoPro</span></a></li>
-                    <li class="logo4"><a href="#"><span class="visually-hidden">VIVE</span></a></li>
+                    <li><a class="logo1" href="#"><span class="visually-hidden">DJI</span></a></li>
+                    <li><a class="logo2" href="#"><span class="visually-hidden">SP Gadgets</span></a></li>
+                    <li><a class="logo3" href="#"><span class="visually-hidden">GoPro</span></a></li>
+                    <li><a class="logo4" href="#"><span class="visually-hidden">VIVE</span></a></li>
                 </ul>
             </section>
             <div class="index-columns container">
@@ -249,7 +249,7 @@
                 <section class="contacts">
                     <h2>Контакты</h2>
                     <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-                    <img  class="map-img" src="img/map.jpg" alt="Магазина Девайс находится по адресу г.Москва, ул.Строителей, 15" width="560" height="222"><br>
+                    <a href="#"><img  class="map-img" src="img/map.jpg" alt="Магазина Девайс находится по адресу г.Москва, ул.Строителей, 15" width="560" height="222"></a>
                     <a class="button contact-us-link" href="write-us.html">Напишите нам</a>
                 </section>
             </div>
@@ -258,7 +258,7 @@
         <footer class="main-footer">
             <div class="footer-wrapper container">
                 <div class="footer-top-section">
-                    <a class="footer-logo">
+                    <a class="footer-logo" href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" width="163" height="35" viewBox="0 0 163 35">
                             <defs>
                                 <style>
@@ -272,14 +272,14 @@
                     </a>
                     <ul class="footer-user-navigation">
                         <li class="login-link">
-                            <a href="#">
+                            <a class="login-link-footer"href="#">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="13px" height="12px" viewBox="0 0 13 12" enable-background="new 0 0 13 12" xml:space="preserve">
-                                    <path fill="#272525" d="M0.032,12h12.937c-0.163-2.643-2.074-4.837-4.671-5.543C9.306,5.846,9.985,4.75,9.985,3.485
+                                    <path d="M0.032,12h12.937c-0.163-2.643-2.074-4.837-4.671-5.543C9.306,5.846,9.985,4.75,9.985,3.485
                                 	C9.985,1.561,8.425,0,6.5,0S3.015,1.561,3.015,3.485c0,1.264,0.68,2.361,1.688,2.972C2.106,7.163,0.194,9.357,0.032,12z" />
                                 </svg>Войти</a>
                         </li>
                         <li class="compare-link">
-                            <a href="#">
+                            <a class="compare-link-footer"href="#">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="10px" height="10px" viewBox="0 0 10 10" enable-background="new 0 0 10 10" xml:space="preserve">
                                     <rect x="8" y="2" width="1.984" height="8" />
                                     <rect y="3" width="1.984" height="7" />
@@ -287,7 +287,7 @@
                                 </svg>Сравнить</a>
                         </li>
                         <li class="cart-link">
-                            <a href="#">
+                            <a class="cart-link-footer"href="#">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12px" height="12px" viewBox="0 0 12 12" enable-background="new 0 0 12 12" xml:space="preserve">
                                     <g>
                                         <path d="M11.864,3.017c-0.082-0.098-0.203-0.154-0.327-0.154H9.225V4.09c0,0.563-0.484,1.022-1.08,1.022
@@ -345,7 +345,7 @@
                                 </g>
                                 </svg></a></li>
                     </ul>
-                    <a href="https://htmlacademy.ru" class="logo-html">
+                    <a href="https://htmlacademy.ru/intensive/htmlcss" class="logo-html">
                         <span class="visually-hidden">HTML Academy</span>
                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
                             <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.473,8.017l13.43-7.99l0.042-0.025V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 L13.494,5.23l-0.087,0.05l-0.088-0.056v0.109L1.925,12.118V3.147l11.548-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.014,1.415l5.904,3.513l-0.86,0.507l-5.03-2.992l-0.014,1.415l3.827,2.275l-0.782,0.523l-3.031-1.787 l-0.014,1.413l1.853,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.016,1.044L5.41,18.234L5.395,19.65 l7.979,4.795l0.018,1.076l-7.973-4.74l-0.013,1.414l8.021,4.822l0.046,0.025l8.143-4.872l-0.011-5.177l3.415-2.036v10.021 L13.472,31.85L1.925,24.979V15.127z" />
@@ -370,7 +370,7 @@
                     <label for="message">Текст письма:</label>
                     <textarea id="message" name="message" placeholder="В свободной форме"></textarea>
                 </p>
-                <button class="modal-close" type="submit">
+                <button class="modal-close" type="button">
                     <span class="visually-hidden">Закрыть</span>
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="55px" height="55px" viewBox="0 0 55 55" enable-background="new 0 0 55 55" xml:space="preserve">
                         <path fill="#F0C52E" d="M27.5,0C12.312,0,0,12.312,0,27.5C0,42.688,12.312,55,27.5,55C42.688,55,55,42.688,55,27.5
@@ -395,6 +395,6 @@
             </button>
         </section>
 
-        <script src="js/popup.js"></script>
+        <script src="js/main.js"></script>
     </body>
 </html>

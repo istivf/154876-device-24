@@ -56,9 +56,6 @@ sliderButtons3.forEach.call(sliderButtons3, function(sliderButton3) {
     })
 });
 
-// ___________________
-
-
 deliveryButton.addEventListener("click", function (evt) {
     deliveryButton.classList.add("service-button-active");
     delivery.classList.remove("hidden");
@@ -87,17 +84,14 @@ creditButton.addEventListener("click", function (evt) {
     warranty.classList.add("hidden");
 })
 
-// ------------
-
 var isStorageSupport = true;
 var storage = "";
 
 try {
     storage = localStorage.getItem("contactName");
-} catch {
+} catch (err) {
     isStorageSupport = false;
 }
-
 
 link.addEventListener("click", function (evt) {
     evt.preventDefault();
