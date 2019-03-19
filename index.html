@@ -51,8 +51,19 @@
         </header>
 
         <main class="main">
-            <section class="container">
-                <section class="slider">
+            <section class="sliders container">
+                <ul class="slider-controls">
+                    <li>
+                        <button class="slider-control slider1-on" type="button"><span class="visually-hidden">Слайдер 1</span></button>
+                    </li>
+                    <li>
+                        <button class="slider-control slider2-on" type="button"><span class="visually-hidden">Слайдер 2</span></button>
+                    </li>
+                    <li>
+                        <button class="slider-control slider3-on" type="button"><span class="visually-hidden">Слайдер 3</span></button>
+                    </li>
+                </ul>
+                <section class="slider1">
                     <img src="img/slider-1.png" alt="Самая длинная палка для селфи" width="384" height="486">
                     <div class="slider-info">
                         <span class="slider-number">01</span>
@@ -60,20 +71,6 @@
                         <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
                         <div class="slider-buttons">
                             <a class="button slider-button" href="#">Подробнее</a>
-                            <ul>
-                                <li>
-                                    <input class="slider-radio visually-hidden" type="radio" name="slider1" id="slider-1">
-                                    <label class="slider1-on checked-slider" for="slider-1"><span class="visually-hidden">Слайдер 1</span></label>
-                                </li>
-                                <li>
-                                    <input class="slider-radio visually-hidden" type="radio" name="slider1" id="slider-2">
-                                    <label class="slider2-on" for="slider-2"><span class="visually-hidden">Слайдер 2</span></label>
-                                </li>
-                                <li>
-                                    <input class="slider-radio visually-hidden" type="radio" name="slider1" id="slider-3">
-                                    <label class="slider3-on" for="slider-3"><span class="visually-hidden">Слайдер 3</span></label>
-                                </li>
-                            </ul>
                         </div>
                         <div class="slider-params">
                             <p><span>8,5 м</span>Длина палки</p>
@@ -82,7 +79,7 @@
                         </div>
                     </div>
                 </section>
-                <section class="slider2">
+                <section class="slider2 hidden">
                     <img src="img/slider-2.png" alt="Самая длинная палка для селфи" width="345" height="485">
                     <div class="slider-info">
                         <span class="slider-number">02</span>
@@ -90,28 +87,13 @@
                         <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
                         <div class="slider-buttons">
                             <a class="button slider-button" href="#">Подробнее</a>
-                            <ul>
-                                <li>
-                                    <input class="slider-radio visually-hidden" type="radio" name="slider2" id="slider-4">
-                                    <label class="slider1-on" for="slider-4"><span class="visually-hidden">Слайдер 1</span></label>
-
-                                </li>
-                                <li>
-                                    <input class="slider-radio visually-hidden" type="radio" name="slider2" id="slider-5">
-                                    <label class="slider2-on checked-slider" for="slider-5"><span class="visually-hidden">Слайдер 2</span></label>
-                                </li>
-                                <li>
-                                    <input class="slider-radio visually-hidden" type="radio" name="slider2" id="slider-6">
-                                    <label class="slider3-on" for="slider-6"><span class="visually-hidden">Слайдер 3</span></label>
-                                </li>
-                            </ul>
                         </div>
                         <div class="slider-params">
                             <p><span>48 часов</span>Без подзарядки</p>
                         </div>
                     </div>
                 </section>
-                <section class="slider3">
+                <section class="slider3 hidden">
                     <img src="img/slider-3.png" alt="Самая длинная палка для селфи" width="526" height="334">
                     <div class="slider3-info">
                         <span class="slider-number">03</span>
@@ -119,20 +101,6 @@
                         <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
                         <div class="slider-buttons">
                             <a class="button slider-button" href="#">Подробнее</a>
-                            <ul>
-                                <li>
-                                    <input class="slider-radio visually-hidden" type="radio" name="slider31" id="slider-7">
-                                    <label class="slider1-on" for="slider-7"><span class="visually-hidden">Слайдер 1</span></label>
-                                </li>
-                                <li>
-                                    <input class="slider-radio visually-hidden" type="radio" name="slider31" id="slider-8">
-                                    <label class="slider2-on" for="slider-8"><span class="visually-hidden">Слайдер 2</span></label>
-                                </li>
-                                <li>
-                                    <input class="slider-radio visually-hidden" type="radio" name="slider31" id="slider-9">
-                                    <label class="slider3-on checked-slider" for="slider-9"><span class="visually-hidden">Слайдер 3</span></label>
-                                </li>
-                            </ul>
                         </div>
                         <div class="slider3-params">
                             <p><span>800 м</span>Дальность полета</p>
@@ -198,7 +166,7 @@
                 <div class="services-wrapper container">
                     <section>
                         <ul class="services-list">
-                            <li><button type="button" class="button services-button delivery-button">Доставка</button></li>
+                            <li><button type="button" class="button services-button delivery-button service-button-active">Доставка</button></li>
                             <li><button type="button" class="button services-button warranty-button">Гарантия</button></li>
                             <li><button type="button" class="button services-button credit-button">Кредит</button></li>
                         </ul>
@@ -210,14 +178,14 @@
                         </div>
                         <img src="img/delivery.png" alt="Доставвка" width="136" height="164">
                     </section>
-                    <section class="service-information warranty-service">
+                    <section class="service-information warranty-service hidden">
                         <div>
                             <h2>Гарантия</h2>
                             <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
                         </div>
                         <img src="img/warranty.png" alt="Доставвка" width="171" height="194">
                     </section>
-                    <section class="service-information credit-service">
+                    <section class="service-information credit-service hidden">
                         <div>
                             <h2>Кредит</h2>
                             <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
