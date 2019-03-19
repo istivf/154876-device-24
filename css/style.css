@@ -99,6 +99,8 @@ body {
     padding-top: 21px;
     padding-left: 60px;
     padding-right: 57px;
+    background-image: -webkit-linear-gradient(#ffffff 40px, #f7e296 40px);
+    background-image: -o-linear-gradient(#ffffff 40px, #f7e296 40px);
     background-image: linear-gradient(#ffffff 40px, #f7e296 40px);
 }
 
@@ -956,7 +958,8 @@ body {
     border: none;
     z-index: 1;
     border-radius: 50%;
-    box-shadow: 0 2px 0 rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0 2px 0 rgba(0,0,0,0.1);
+            box-shadow: 0 2px 0 rgba(0,0,0,0.1);
 }
 
 .range-control::before {
@@ -1675,24 +1678,46 @@ body {
 }
 
 .slider-controls {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: absolute;
     margin: 0;
     padding: 0;
-    top: 317px;
-    right: 86px;
+    top: 320px;
+    right: 82px;
 
     z-index: 1;
     list-style: none;
 }
 
+.slider-controls li {
+    position: relative;
+}
+
 .slider-control {
-    width: 10px;
-    height: 10px;
-    margin-right: 17px;
+    position: relative;
+    width: 12px;
+    height: 12px;
+    margin: 0;
+    padding: 0;
+    margin-right: 21px;
     border: 1px solid #000000;
     border-radius: 50%;
     background: none;
+}
+
+.slider-control-active::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 2px;
+    height: 2px;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    background: none;
+    z-index: 5;
 }
 
 .popular {
@@ -1709,7 +1734,8 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 .popular-list li {
@@ -1866,6 +1892,8 @@ body {
     padding-top: 82px;
     margin-left: 132px;
     margin-right: 7px;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
 }
 
 .credit-service img {
@@ -1888,7 +1916,8 @@ body {
             justify-content: space-between;
     padding: 0;
     margin: 0;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 .brands-list a {
@@ -1934,7 +1963,9 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -2060,7 +2091,8 @@ body {
 .right-dir a {
     width: 100%;
     height: 100%;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     padding-top: 24px;
     text-align: center;
 }
@@ -2241,6 +2273,6 @@ body {
     color: #000000;
 }
 
-.filter input:disabled + label{
+.filter input:disabled + label {
     opacity: 0.25;
 }

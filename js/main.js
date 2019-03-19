@@ -14,6 +14,11 @@ var emailField = document.querySelector("#e-mail");
 var sliderButton1 = document.querySelector(".slider1-on");
 var sliderButton2 = document.querySelector(".slider2-on");
 var sliderButton3 = document.querySelector(".slider3-on");
+
+// var focusMasrk1 = document.querySelector(".focus-mark1");
+// var focusMasrk2 = document.querySelector(".focus-mark1");
+// var focusMasrk3 = document.querySelector(".focus-mark1");
+
 var slider1 = document.querySelector(".slider1");
 var slider2 = document.querySelector(".slider2");
 var slider3 = document.querySelector(".slider3");
@@ -27,20 +32,29 @@ var credit = document.querySelector(".credit-service");
 
 sliderButton1.addEventListener("click", function (evt) {
     slider1.classList.remove("hidden");
+    sliderButton1.classList.add("slider-control-active");
     slider2.classList.add("hidden");
+    sliderButton2.classList.remove("slider-control-active");
     slider3.classList.add("hidden");
+    sliderButton3.classList.remove("slider-control-active");
 });
 
 sliderButton2.addEventListener("click", function (evt) {
     slider2.classList.remove("hidden");
+    sliderButton2.classList.add("slider-control-active");
     slider1.classList.add("hidden");
+    sliderButton1.classList.remove("slider-control-active");
     slider3.classList.add("hidden");
+    sliderButton3.classList.remove("slider-control-active");
 });
 
 sliderButton3.addEventListener("click", function (evt) {
     slider3.classList.remove("hidden");
+    sliderButton3.classList.add("slider-control-active");
     slider1.classList.add("hidden");
+    sliderButton1.classList.remove("slider-control-active");
     slider2.classList.add("hidden");
+    sliderButton2.classList.remove("slider-control-active");
 });
 
 deliveryButton.addEventListener("click", function (evt) {
